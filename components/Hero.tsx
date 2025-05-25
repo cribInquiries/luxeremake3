@@ -52,9 +52,9 @@ const Hero = () => {
         fontWeight={{ base: "400", sm: "400", md: "400", lg: "400", xl: "400" }}
         fontFamily={"arial"}
       >
-        <Box color={"#222222"} fontWeight={"600"} width={"90%"}>
+        <Box           as={"h1"} color={"#222222"} fontWeight={"600"} width={"90%"}>
           Luxe Managements <br />
-          <Box fontWeight={"400"}>
+          <Box          fontWeight={"400"}>
             Made <FlipWords words={words} />
           </Box>
         </Box>
@@ -67,9 +67,10 @@ const Hero = () => {
           data-aos="fade-up"
         >
           <Text
+          as={"h1"}
             w={["100%", "100%", "80%", "80%", "80%", "80%"]}
             mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
-            fontSize={["30px", "30px", "30px", "50px", "50px", "50px"]}
+            fontSize={["30px", "30px", "30px", "50px", "50px", "40px"]}
             fontWeight={700}
             fontFamily={"arial"}
             bgClip="text"
@@ -80,6 +81,7 @@ const Hero = () => {
             Luxe Managements - Luxury AirBnBs, Simplified.
           </Text>
           <Text
+          as={"h2"}
             fontSize={["18px", "18px", "24px", "24px", "24px", "24px"]}
             mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
             textAlign={["center", "center", "left", "left", "left", "left"]}
