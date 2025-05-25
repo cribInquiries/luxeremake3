@@ -1,5 +1,5 @@
 "use client";
-
+import { Metadata } from "next";
 import React, { useEffect, useState } from "react";
 import { Box, Text } from "@chakra-ui/react";
 import TitleSubheading from "@/components/luxeComponents/Text/titleSubheading";
@@ -80,7 +80,7 @@ import houseSixImg8 from "@/public/images/dalts/houseSix/WEB/8.jpg";
 import houseSixImg9 from "@/public/images/dalts/houseSix/WEB/9.jpg";
 import Image from "next/image";
 // app/gallery/page.tsx
-import { Metadata } from "next";
+
 
 // eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {

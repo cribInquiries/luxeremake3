@@ -1,5 +1,6 @@
 "use client";
 
+import { Metadata } from "next";
 import React, { useEffect, useState } from "react";
 import { Box, Text } from "@chakra-ui/react";
 import TitleSubheading from "@/components/luxeComponents/Text/titleSubheading";
@@ -12,7 +13,6 @@ import {
 } from "@/components/chakra-snippets/dialog";
 import HowWeCanGetYouStarted from "@/components/luxeComponents/HowWeCanGetYouStarted";
 // app/contact/page.tsx
-import { Metadata } from "next";
 
 // eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {

@@ -1,6 +1,7 @@
 "use client";
 
 
+import { Metadata } from "next";
 import React, { useState, useEffect } from "react";
 import { Box, HStack, Text, VStack } from "@chakra-ui/react";
 
@@ -17,7 +18,6 @@ import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultati
 import Image from "next/image";
 
 // app/about/page.tsx
-import { Metadata } from "next";
 
 // eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
