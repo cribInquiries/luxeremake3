@@ -16,6 +16,7 @@ const HowWeCanGetYouStarted = () => {
       stats: [],
       category: "Step 1",
       img: "https://images.pexels.com/photos/5292227/pexels-photo-5292227.jpeg",
+      alt: "A person calling on the phone",
     },
     {
       id: 2,
@@ -26,6 +27,7 @@ const HowWeCanGetYouStarted = () => {
       stats: [],
       category: "Step 2",
       img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      alt: "A person shaking hands with a real estate agent",
     },
     {
       id: 3,
@@ -36,6 +38,7 @@ const HowWeCanGetYouStarted = () => {
       stats: [],
       category: "Step 3",
       img: "https://images.pexels.com/photos/5082576/pexels-photo-5082576.jpeg",
+      alt: "A camera taking a photo of a house",
     },
     {
       id: 4,
@@ -46,6 +49,7 @@ const HowWeCanGetYouStarted = () => {
       stats: [],
       category: "Step 4",
       img: "https://images.pexels.com/photos/7513208/pexels-photo-7513208.jpeg",
+      alt: "A person sitting on a couch with a laptop",
     },
     {
       id: 5,
@@ -56,6 +60,7 @@ const HowWeCanGetYouStarted = () => {
       stats: [],
       category: "Step 5",
       img: "https://images.pexels.com/photos/6483619/pexels-photo-6483619.jpeg",
+      alt: "A graph showing a property's performance",
     },
   ];
 
@@ -171,7 +176,7 @@ const HowWeCanGetYouStarted = () => {
                   marginBottom="24px"
                 >
                   <Text
-                    fontSize="14px"
+                          textStyle={"smallText"}
                     fontWeight="600"
                     letterSpacing="1px"
                     color="#555"
@@ -240,23 +245,7 @@ const HowWeCanGetYouStarted = () => {
                           transition: "all 0.3s ease",
                         }}
                       >
-                        <Text
-                          fontSize="24px"
-                          fontWeight="700"
-                          color="#333"
-                          marginBottom="8px"
-                          as={"h4"}
-                        >
-                          {stat.value}
-                        </Text>
-                        <Text
-                          fontSize="14px"
-                          fontWeight="500"
-                          color="#777"
-                          as={"h4"}
-                        >
-                          {stat.label}
-                        </Text>
+                   
                       </Box>
                     ))}
                 </Box>
@@ -315,7 +304,7 @@ const HowWeCanGetYouStarted = () => {
                     width="100%"
                   >
                     <Text
-                      fontSize="16px"
+                        textStyle={"smallText"}
                       fontWeight="600"
                       color="white"
                       textShadow="0 1px 2px rgba(0,0,0,0.3)"
@@ -387,7 +376,7 @@ const HowWeCanGetYouStarted = () => {
           paddingY="20px"
           borderRadius="12px"
           fontWeight="600"
-          fontSize="18px"
+       textStyle={"smallText"}
           cursor="pointer"
           _hover={{
             backgroundColor: "#222",
