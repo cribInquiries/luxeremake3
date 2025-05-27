@@ -125,7 +125,7 @@ const ServicesThreeCards = ({
                 quality={70}
                 loading="lazy"
                 src={card.imgUrl}
-                alt=""
+                alt={card.title}
                 fill
                 style={{
                   objectFit: "cover",

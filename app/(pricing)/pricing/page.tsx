@@ -288,7 +288,7 @@ const Pricing = () => {
                   quality={70}
                   loading="lazy"
                   src="https://images.pexels.com/photos/7651924/pexels-photo-7651924.jpeg"
-                  alt=""
+                  alt="Comprehensive Management"
                   fill // makes the img fill the Box
                   style={{
                     objectFit: "cover", // replicates background-size: cover

@@ -271,7 +271,7 @@ const FurnishingAndStyling = () => {
                 quality={70}
                 loading="lazy"
                 src="https://images.pexels.com/photos/7213549/pexels-photo-7213549.jpeg"
-                alt=""
+                alt="Furnishing and Styling Image"
                 fill // makes the image fill the Box completely
                 style={{
                   objectFit: "cover", // replicates background-size: cover
@@ -562,7 +562,7 @@ const FurnishingAndStyling = () => {
                   quality={70}
                   loading="lazy"
                   src="https://images.pexels.com/photos/31902663/pexels-photo-31902663.jpeg"
-                  alt=""
+                  alt="Premium Textiles"
                   fill // makes the image fill the Box
                   style={{
                     objectFit: "cover", // replicates background-size: cover
@@ -601,7 +601,7 @@ const FurnishingAndStyling = () => {
                   quality={70}
                   loading="lazy"
                   src="https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg"
-                  alt=""
+                  alt="Artisanal Furniture"
                   fill // makes the image fill the Box
                   style={{
                     objectFit: "cover", // replicates background-size: cover
@@ -640,7 +640,7 @@ const FurnishingAndStyling = () => {
                   quality={70}
                   loading="lazy"
                   src="https://images.pexels.com/photos/7303902/pexels-photo-7303902.jpeg"
-                  alt=""
+                  alt="Curated Accessories"
                   fill // makes the image fill the Box
                   style={{
                     objectFit: "cover", // replicates background-size: cover

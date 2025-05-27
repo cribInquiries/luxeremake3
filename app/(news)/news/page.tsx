@@ -213,7 +213,7 @@ const NewsPage = () => {
                   quality={70}
                   loading="lazy"
                   src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
-                  alt=""
+                  alt="A person working on a laptop in a modern office"
                   fill // makes the img absolutely fill this Box
                   style={{
                     objectFit: "cover", // background-size: cover

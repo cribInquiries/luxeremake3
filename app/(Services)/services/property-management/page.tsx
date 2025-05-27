@@ -182,7 +182,7 @@ const PropertyManagement = () => {
               quality={70}
               loading="lazy"
               src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg"
-              alt=""
+              alt="Property Management"
               fill // Next.js 13+ API; for older versions use layout="fill"
               style={{
                 objectFit: "cover", // replicates background-size: cover

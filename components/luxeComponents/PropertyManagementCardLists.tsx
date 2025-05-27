@@ -222,7 +222,7 @@ const PropertyManagementCardLists = () => {
                 quality={70}
                 loading="lazy"
                 src="https://images.pexels.com/photos/7213549/pexels-photo-7213549.jpeg"
-                alt=""
+                alt="stunning house image"
                 fill // makes the image fill the Box entirely
                 style={{
                   objectFit: "cover", // replicates background-size: cover
@@ -443,7 +443,7 @@ const PropertyManagementCardLists = () => {
                 quality={70}
                 loading="lazy"
                 src="https://images.pexels.com/photos/5667613/pexels-photo-5667613.jpeg"
-                alt=""
+                alt="Property Management Image"
                 fill // makes the image fill the Box entirely
                 style={{
                   objectFit: "cover", // replicates background-size: cover
@@ -766,7 +766,7 @@ const PropertyManagementCardLists = () => {
                 quality={70}
                 loading="lazy"
                 src="https://images.pexels.com/photos/6195131/pexels-photo-6195131.jpeg"
-                alt=""
+           alt="Property Management Image"
                 fill // makes the image fill the Box entirely
                 style={{
                   objectFit: "cover", // replicates background-size: cover
@@ -985,7 +985,7 @@ const PropertyManagementCardLists = () => {
                 quality={70}
                 loading="lazy"
                 src="https://images.pexels.com/photos/669621/pexels-photo-669621.jpeg"
-                alt=""
+           alt="Property Management Image"
                 fill // makes the image fill the Box entirely
                 style={{
                   objectFit: "cover", // replicates background-size: cover

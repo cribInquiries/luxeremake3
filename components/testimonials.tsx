@@ -271,7 +271,7 @@ const Testimonials = () => {
                   quality={70}
                   loading="lazy"
                   src={reviews[currentSlide].image}
-                  alt="" // you can add a meaningful alt if needed
+                  alt="positive reviews users" // you can add a meaningful alt if needed
                   fill // makes the img fill the Box
                   style={{
                     objectFit: "cover", // replicates background-size: cover

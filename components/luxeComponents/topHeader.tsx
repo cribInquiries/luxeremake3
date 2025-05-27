@@ -80,7 +80,7 @@ const TopHeader = ({
           quality={70}
           loading="lazy"
           src={imgUrl}
-          alt=""
+          alt={`${wordOne} ${wordTwo} background`}
           fill
           style={{
             objectFit: "cover",

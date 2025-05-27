@@ -224,7 +224,7 @@ const PhotographyCardLists = () => {
                 quality={70}
                 loading="lazy"
                 src="https://images.pexels.com/photos/776908/pexels-photo-776908.jpeg"
-                alt=""
+                alt="Amazing camera shot of a house"
                 fill // makes the image fill the Box entirely
                 style={{
                   objectFit: "cover", // replicates backgroundSize="cover"
@@ -395,7 +395,7 @@ const PhotographyCardLists = () => {
                 quality={70}
                 loading="lazy"
                 src="https://images.pexels.com/photos/1336858/pexels-photo-1336858.jpeg"
-                alt=""
+                    alt="Amazing camera shot of a house"
                 fill // makes the image fill the Box entirely
                 style={{
                   objectFit: "cover", // replicates backgroundSize="cover"
@@ -671,7 +671,7 @@ const PhotographyCardLists = () => {
                 quality={70}
                 loading="lazy"
                 src="https://images.pexels.com/photos/9125753/pexels-photo-9125753.jpeg"
-                alt=""
+                    alt="Amazing camera shot of a house"
                 fill // makes the image absolutely fill the Box
                 style={{
                   objectFit: "cover", // replicates background-size: cover
@@ -840,7 +840,7 @@ const PhotographyCardLists = () => {
                 quality={70}
                 loading="lazy"
                 src="https://images.pexels.com/photos/8408537/pexels-photo-8408537.jpeg"
-                alt=""
+                    alt="Amazing camera shot of a house"
                 fill // makes the image fill the Box entirely
                 style={{
                   objectFit: "cover", // replicates background-size: cover
