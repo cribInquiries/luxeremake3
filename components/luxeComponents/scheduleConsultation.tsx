@@ -87,7 +87,7 @@ const ScheduleConsultation = () => {
             {/* Subtitle */}
             <Text
               color="rgba(255, 255, 255, 0.9)"
-               textStyle={"basicText"}
+               textStyle={"smallText"}
              
               maxWidth="800px"
               mx="auto"

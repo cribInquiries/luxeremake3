@@ -18,7 +18,7 @@ const NotFound = () => (
     >
       <Box textAlign="center">
         <Text
-          fontSize={{ base: '6xl', md: '8xl' }}
+         textStyle={"title"}
           fontWeight="extrabold"
           color="black"
        
@@ -28,7 +28,7 @@ const NotFound = () => (
 
         <Text
           mt={4}
-          fontSize={{ base: 'lg', md: '2xl' }}
+         textStyle={"smallText"}
           fontWeight="medium"
                  color="black"
         >
@@ -41,6 +41,7 @@ const NotFound = () => (
           mx="auto"
           color="gray.500"
           lineHeight="tall"
+    textStyle={"smallText"}
         >
           The link you followed may be broken, or the page has been removed.  
           Let’s get you back on track.
@@ -53,7 +54,7 @@ const NotFound = () => (
           mt={6}
           px={8}
           py={3}
-          fontSize="md"
+          textStyle={"smallText"}
           fontWeight="semibold"
           color="white"
      bg={"black"}

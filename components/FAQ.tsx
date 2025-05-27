@@ -220,7 +220,7 @@ const FAQ = ({ type }: { type: string }) => {
           </Text>
           <Text
             as="h3"
-   textStyle={"basicText"}
+   textStyle={"smallText"}
             color="#4B5563"
             fontWeight="400"
             maxWidth="1200px"
@@ -315,7 +315,7 @@ textStyle={"smallText"}
                     flex="1"
                     transition="all 0.2s"
                     as={"h4"}
-               textStyle={"basicText"}
+               textStyle={"smallText"}
                   >
                     {faq.question}
                   </Text>
@@ -388,7 +388,7 @@ textStyle={"smallText"}
           border="1px solid #E5E7EB"
         >
           <Box flex="1">
-            <Text textStyle={"basicText"} fontWeight="700" color="#0A1029" mb={2} as={'h3'}>
+            <Text textStyle={"smallText"} fontWeight="700" color="#0A1029" mb={2} as={'h3'}>
               Still have questions?
             </Text>
             <Text textStyle={"smallText"} color="#4B5563" lineHeight="1.6" as={'h4'}>

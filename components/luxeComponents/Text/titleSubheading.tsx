@@ -32,7 +32,7 @@ const TitleSubheading = ({
           as={"h3"}
           data-aos="fade-up"
           w={["90%", "90%", "90%", "80%", "80%", "80%"]}
-          textStyle={"basicText"}
+          textStyle={"subheading"}
           // mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
 
           fontFamily={"arial"}

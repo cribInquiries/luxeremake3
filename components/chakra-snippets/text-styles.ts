@@ -5,40 +5,28 @@ export const textStyles = defineTextStyles({
   smallText: {
     value: {
       fontSize: {
-        base: "12px",
-        sm:   "13px",
-        md:   "14px",
-        lg:   "15px",
-        xl:   "16px",
-        "2xl":"17px",
+        base: "16px",
+        sm:   "16px",
+        md:   "16px",
+        lg:   "18px",
+        xl:   "18px",
+        "2xl":"18px",
       },
-   
     },
   },
   //  textStyle={"smallText"}
-  basicText: {
-    value: {
-      fontSize: {
-        base: "16px",
-        sm:   "18px",
-        md:   "20px",
-        lg:   "22px",
-        xl:   "24px",
-        "2xl":"26px",
-      },
-     
-    },
-  },
-  // textStyle={"basicText"}
+ 
+  // textStyle={"smallText"}
   subheading: {
     value: {
       fontSize: {
-        base: "20px",
-        sm:   "22px",
-        md:   "24px",
-        lg:   "26px",
-        xl:   "28px",
-        "2xl":"30px",
+       
+          base: "18px",
+          sm:   "18px",
+          md:   "18px",
+          lg:   "26px",
+          xl:   "26px",
+          "2xl":"26px",
       },
    
     },
@@ -47,12 +35,12 @@ export const textStyles = defineTextStyles({
   heading: {
     value: {
       fontSize: {
-        base: "24px",
-        sm:   "28px",
-        md:   "32px",
-        lg:   "36px",
-        xl:   "40px",
-        "2xl":"44px",
+        base: "25px",
+        sm:   "25px",
+        md:   "25px",
+        lg:   "50px",
+        xl:   "50px",
+        "2xl":"50px",
       },
    
     },

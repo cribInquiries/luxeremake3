@@ -107,7 +107,7 @@ const About = () => {
             <Text
               w={["100%", "100%", "100%", "100%", "100%", "100%"]}
               mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
-              fontSize={["25px", "25px", "25px", "50px", "50px", "50px"]}
+                    textStyle={"heading"}
               fontWeight={600}
               fontFamily={"arial"}
               bgClip="text"
@@ -118,7 +118,7 @@ const About = () => {
               Our Story
             </Text>
             <Text
-              fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
+                   textStyle={"smallText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
               fontFamily={"arial"}

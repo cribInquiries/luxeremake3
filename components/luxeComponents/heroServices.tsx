@@ -221,7 +221,7 @@ const HeroServices = () => {
             </Text>
             <Text
               as={"h3"}
-              textStyle={"basicText"}
+              textStyle={"smallText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
               fontFamily={"arial"}
