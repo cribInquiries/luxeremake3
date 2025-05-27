@@ -51,17 +51,7 @@ const HowWeCanGetYouStarted = () => {
       img: "https://images.pexels.com/photos/7513208/pexels-photo-7513208.jpeg",
       alt: "A person sitting on a couch with a laptop",
     },
-    {
-      id: 5,
-      title: "Track Your Property’s Progress",
-      description:
-        "Get real-time updates on booking rates, revenue, and guest feedback to ensure your goals are being met.",
-      icon: <ChartArea size={20} />,
-      stats: [],
-      category: "Step 5",
-      img: "https://images.pexels.com/photos/6483619/pexels-photo-6483619.jpeg",
-      alt: "A graph showing a property's performance",
-    },
+  
   ];
 
   const router = useRouter();

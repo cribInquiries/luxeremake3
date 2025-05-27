@@ -86,7 +86,8 @@ function ThumnailSlider() {
           alt={alt}
           width={width}
           height={height}
-          loading="lazy"
+         
+          loading={"lazy"} // Load image lazily when visible
           style={{
             backgroundPosition: "bottom",
             height: "100%",
