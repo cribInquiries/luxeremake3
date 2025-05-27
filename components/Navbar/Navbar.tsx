@@ -224,7 +224,7 @@ const Navbar = () => {
         },
       ],
     },
-    { name: "News", path: "/news", hasDropdown: false },
+    // { name: "News", path: "/news", hasDropdown: false },
     {
       name: "Services",
       path: "/services",
