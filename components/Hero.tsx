@@ -9,7 +9,6 @@ import { ArrowRight } from "lucide-react";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
-import LuxeAiAssistance from "./luxeComponents/LuxeAiAssistance";
 
 const HouseHeroParallax = dynamic(
   () => import("./customUI/Parallax/HouseHeroParallax"),

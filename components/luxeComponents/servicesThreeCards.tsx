@@ -23,7 +23,7 @@ const ServicesThreeCards = ({
 }) => {
   return (
     <Box
-      mt={["80px", "90px", "90px", "0px", "0px", "0px"]}
+  
       w="100%"
       px={["4%", "4%", "6%", "6%", "6%", "10%"]}
       fontFamily="arial"
@@ -45,7 +45,7 @@ const ServicesThreeCards = ({
           borderRadius="2px"
         />
         <Text
-          fontSize={["28px", "32px", "36px", "40px"]}
+         textStyle={"heading"}
           fontWeight="700"
           mb="16px"
           lineHeight="1.2"
@@ -53,7 +53,7 @@ const ServicesThreeCards = ({
           {CardDataHeader[0].mainTitle}
         </Text>
         <Text
-          fontSize={["16px", "17px", "18px"]}
+          textStyle={"basicText"}
           color="#4A5568"
           lineHeight="1.6"
         >
@@ -62,24 +62,14 @@ const ServicesThreeCards = ({
       </Box>
 
       {/* Decorative element */}
-      <Box
-        position="absolute"
-        top="-20px"
-        right="5%"
-        width="120px"
-        height="120px"
-        borderRadius="50%"
-        bg="rgba(49, 130, 206, 0.05)"
-        zIndex="-1"
-        display={["none", "none", "block"]}
-      />
+
 
       <Box
         display="flex"
         flexDirection={["column", "column", "column", "row"]}
         justifyContent="center"
         alignItems="stretch"
-        gap={["32px", "32px", "36px", "40px"]}
+        gap={["26px", "26px", "26px", "26px"]}
         width="100%"
         position="relative"
       >
@@ -135,15 +125,8 @@ const ServicesThreeCards = ({
 
               {/* Accent line */}
 
-              <Box
-                position="absolute"
-                bottom="0"
-                left="0"
-                p={["20px", "24px", "28px"]}
-                width="100%"
-              >
-                {/* Small preview text */}
-              </Box>
+          
+               
             </Box>
 
             {/* Card content */}
@@ -151,7 +134,7 @@ const ServicesThreeCards = ({
               <Text
                 textAlign={"center"}
                 color="black"
-                fontSize={["24px", "26px", "28px", "28px"]}
+                textStyle={"subheading"}
                 fontWeight="700"
                 lineHeight="1.2"
                 mb="8px"
@@ -159,7 +142,7 @@ const ServicesThreeCards = ({
                 {card.title}
               </Text>
               <Text
-                fontSize={["15px", "16px", "16px", "17px"]}
+                textStyle={"smallText"}
                 color="#2D3748"
                 lineHeight="1.7"
                 mb="16px"
@@ -176,19 +159,7 @@ const ServicesThreeCards = ({
         ))}
       </Box>
 
-      {/* Additional decorative element */}
-      <Box
-        position="absolute"
-        bottom="-60px"
-        left="5%"
-        width="80px"
-        height="80px"
-        borderRadius="12px"
-        transform="rotate(45deg)"
-        bg="rgba(49, 130, 206, 0.05)"
-        zIndex="-1"
-        display={["none", "none", "block"]}
-      />
+
     </Box>
   );
 };

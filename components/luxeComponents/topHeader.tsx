@@ -57,7 +57,7 @@ const TopHeader = ({
       <Box
         position="relative"
         w="95%"
-        h={["380px", "420px", "480px", "520px", "580px"]}
+        h={["480px", "480px", "480px", "520px", "580px"]}
         borderRadius="20px"
         overflow="hidden"
         boxShadow="0 10px 30px rgba(0,0,0,0.2)"

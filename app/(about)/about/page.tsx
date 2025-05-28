@@ -78,7 +78,7 @@ const About = () => {
     { value: "98%", label: "Guest Satisfaction" },
     { value: "35%", label: "Average Revenue Increase" },
     { value: "24/7", label: "Guest Support" },
-    { value: "100+", label: "Properties Managed" },
+    // { value: "100+", label: "Properties Managed" },
   ];
 
   return (
