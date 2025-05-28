@@ -376,7 +376,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <Box
-            display={{ base: "block", md: "none" }}
+            display={{ base: "block", md: "block", lg: "none" }}
             cursor="pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
@@ -389,7 +389,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation Items */}
           <Box
-            display={{ base: "none", md: "flex" }}
+            display={{ base: "none", md: "none", lg: "flex" }}
             alignItems="center"
             justifyContent="flex-end"
           >

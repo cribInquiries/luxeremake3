@@ -23,10 +23,15 @@ const ClientProviderWithFallback = dynamic(
 
 // eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
-  title: "AirBnB Property Management in Adelaide",
+  title: "AirBnB Property Management in Adelaide | Luxe Managements",
   description:
     "Boost your AirBnB rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
   metadataBase: new URL("https://www.luxemanagements.com"),
+
+  // The manifest.json file is a JSON file that contains metadata about your
+  // Next.js project. It is used by the browser to determine the resources that
+  // are needed to render your application.
+
   alternates: {
     canonical: "https://www.luxemanagements.com",
   },
@@ -39,10 +44,13 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "AirBnB Property Management Adelaide",
+    title: "AirBnB Property Management Adelaide | Luxe Managements",
     description:
       "Boost your AirBnB rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
     url: "https://www.luxemanagements.com",
+    locale: "en_US",
+
+  
     siteName: "Luxe Managements",
     images: [
       {
@@ -56,7 +64,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AirBnB Property Management Adelaide",
+    title: "AirBnB Property Management Adelaide | Luxe Managements",
+    site: "@LuxeManagements",
+    creator: "@LuxeManagements",
+
     description: "Boost your AirBnB rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
     images: ["https://www.luxemanagements.com/og-image.png"],
   },
