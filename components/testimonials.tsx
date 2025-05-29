@@ -231,7 +231,7 @@ const Testimonials = () => {
             >
               <Text
                 as="h4"
-               textStyle={"basicText"}
+               textStyle={"subheading"}
                 lineHeight="1.6"
                 color="rgba(0,0,0,0.8)"
                 fontFamily="arial"

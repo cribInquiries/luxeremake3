@@ -25,7 +25,9 @@ const GalleryHeroSection = () => {
       </HStack>
       <TitleSubheading
         title={"Gallery"}
-        subheading={"Take a look at some of our work."}
+        subheading={
+          "Explore our portfolio to see our latest innovative projects in web development, design, and beyond."
+        }
       />
       <HStack id="gallery-section" w="100%" justify="center" align="center">
         <Box

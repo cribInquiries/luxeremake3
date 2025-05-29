@@ -9,7 +9,6 @@ import { ArrowRight } from "lucide-react";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
-import LuxeAiAssistance from "./luxeComponents/LuxeAiAssistance";
 
 const HouseHeroParallax = dynamic(
   () => import("./customUI/Parallax/HouseHeroParallax"),
@@ -54,7 +53,7 @@ const Hero = () => {
         </Box>
       </Stack>
 
-      <Box overflowX={"hidden"} mt={"350px"}>
+      <Box overflowX={"hidden"} mt={{base: "150px", sm: "150px", md: "250px", lg: "350px", xl: "350px"}}>
         <Box
           px={["4%", "4%", "6%", "6%", "6%", "10%"]}
           pb={"50px"}

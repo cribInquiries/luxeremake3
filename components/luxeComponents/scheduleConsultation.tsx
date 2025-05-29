@@ -39,7 +39,7 @@ const ScheduleConsultation = () => {
         >
           {/* Background accent elements for visual interest */}
           <Box
-            display="flex"
+            display={["none", "none", "flex"]}
             flexDirection={["column", "column", "row"]}
             justifyContent="center"
             alignItems="center"
@@ -48,6 +48,7 @@ const ScheduleConsultation = () => {
             maxWidth="800px"
             mx="auto"
             gap={["16px", "20px", "40px"]}
+
           >
             {[
               "Personalized property assessment",

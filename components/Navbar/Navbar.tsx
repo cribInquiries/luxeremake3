@@ -23,7 +23,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1023) {
         setMobileMenuOpen(false);
       }
     };
@@ -376,7 +376,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <Box
-            display={{ base: "block", md: "none" }}
+            display={{ base: "block", md: "block", lg: "none" }}
             cursor="pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
@@ -389,7 +389,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation Items */}
           <Box
-            display={{ base: "none", md: "flex" }}
+            display={{ base: "none", md: "none", lg: "flex" }}
             alignItems="center"
             justifyContent="flex-end"
           >
@@ -514,7 +514,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <Box
         position="fixed"
-        top="70px" // Height of the navbar
+        top={{ base: "70px", md: "100px", lg: "none" }} // Height of the navbar
         left="0"
         right="0"
         bottom="0"
@@ -525,7 +525,7 @@ const Navbar = () => {
         visibility={mobileMenuOpen ? "visible" : "hidden"}
         transition="all 0.3s ease"
         overflowY="auto"
-        display={{ base: "block", md: "none" }}
+        display={{ base: "block", md: "block", lg: "none" }}
         height="calc(100vh - 70px)"
       >
         <Box p="20px">
