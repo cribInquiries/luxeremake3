@@ -71,6 +71,7 @@ const LuxeAiAssistance = () => {
 
   return (
     <Box
+  
       position="fixed"
       bottom={
         open
@@ -88,10 +89,10 @@ const LuxeAiAssistance = () => {
       borderEndEndRadius={open ? "0px" : "20px"}
       boxShadow="0 8px 30px rgba(0, 0, 0, 0.12)"
       width={
-        open ? ["380px", "380px", "460px", "500px", "540px", "580px"] : "72px"
+        open ? ["100%", "100%", "460px", "500px", "540px", "580px"] : "72px"
       }
       height={
-        open ? ["580px", "580px", "580px", "580px", "580px", "680px"] : "72px"
+        open ? ["100%", "100%", "580px", "580px", "580px", "680px"] : "72px"
       }
       transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
       display="flex"

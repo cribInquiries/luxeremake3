@@ -61,7 +61,7 @@ const HowWeCanGetYouStarted = () => {
       width="100%"
       position="relative"
       my={"50px"}
-      px={["8%", "8%", "6%", "0%", "0%", "0%"]}
+      px={["1%", "1%", "2%", "0%", "0%", "0%"]}
     >
       {/* Introduction Section */}
       <HStack
