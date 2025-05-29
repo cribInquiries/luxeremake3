@@ -23,7 +23,7 @@ const ClientProviderWithFallback = dynamic(
 
 // eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
-  title: "Luxe Managements | The Best Airbnb Property Management in Adelaide",
+  title: "Luxe Managements | Airbnb Property Management Adelaide",
   description:
     "Comprehensive Airbnb management services designed to maximize your rental income in Adelaide.",
   metadataBase: new URL("https://www.luxemanagements.com"),
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Luxe Managements | Airbnb Property Management Adelaide",
     description:
-      "Expert Airbnb property management services in Adelaide – full hosting, cleaning, styling, and guest care.",
+    "Comprehensive Airbnb management services designed to maximize your rental income in Adelaide.",
     url: "https://www.luxemanagements.com",
     siteName: "Luxe Managements",
     images: [

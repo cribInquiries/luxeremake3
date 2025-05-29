@@ -8,7 +8,7 @@ export default function Head() {
       {/* Primary Meta Description */}
       <meta
         name="description"
-        content="The Best Airbnb Property Management In Adelaide. Luxe Managements maximizes your rental income with full-service hosting, cleaning, styling, and guest care."
+        content="Airbnb Property Management Adelaide. Luxe Managements maximizes your rental income with full-service hosting, cleaning, styling, and guest care."
       />
 
       {/* Open Graph (Facebook, LinkedIn) */}
@@ -18,7 +18,7 @@ export default function Head() {
       />
       <meta
         property="og:description"
-        content="The Best Airbnb Property Management In Adelaide. Luxe Managements maximizes your rental income with full-service hosting, cleaning, styling, and guest care."
+        content="Airbnb Property Management In Adelaide. Luxe Managements maximizes your rental income with full-service hosting, cleaning, styling, and guest care."
       />
       <meta property="og:url" content="https://www.luxemanagements.com" />
       <meta property="og:type" content="website" />
@@ -35,7 +35,7 @@ export default function Head() {
       />
       <meta
         name="twitter:description"
-        content="The Best Airbnb Property Management In Adelaide. Luxe Managements maximizes your rental income with full-service hosting, cleaning, styling, and guest care."
+        content="Airbnb Property Management In Adelaide. Luxe Managements maximizes your rental income with full-service hosting, cleaning, styling, and guest care."
       />
       <meta
         name="twitter:image"
@@ -47,7 +47,7 @@ export default function Head() {
 
       {/* Page Title */}
       <title>
-        Luxe Managements | The Best Airbnb Property Management In Adelaide
+        Luxe Managements | Airbnb Property Management Adelaide
       </title>
     </>
   );
