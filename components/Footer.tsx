@@ -1,5 +1,5 @@
 import { Box, Text } from "@chakra-ui/react";
-import LuxeLogo from "@/public/png/LuxeLogo.png";
+import LuxeLogo from "@/public/logo.png";
 import Image from "next/image";
 
 const Footer = () => {

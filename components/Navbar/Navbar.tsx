@@ -5,7 +5,7 @@ import { Box, Text } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import luxeLogo from "@/public/png/LuxeLogo.png";
+import luxeLogo from "@/public/logo.png";
 
 const Navbar = () => {
   const router = useRouter();

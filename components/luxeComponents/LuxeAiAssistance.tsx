@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Box, Text } from "@chakra-ui/react";
-import luxeLogo from "@/public/png/LuxeLogo.png";
+import luxeLogo from "@/public/logo.png";
 import Image from "next/image";
 
 const LuxeAiAssistance = () => {
