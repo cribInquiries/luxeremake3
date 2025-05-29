@@ -1,87 +1,69 @@
-// app/layout.tsx
 import { ReactNode } from "react";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Inter } from "next/font/google";
 import Loading from "./loading";
 import LuxeAiAssistance from "@/components/luxeComponents/LuxeAiAssistance";
-import { Inter } from "next/font/google";
-import ClientProvider from "@/components/chakra-snippets/ClientProvider";
 
+// Load Inter font with swap for performance and FOIT avoidance
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
 });
 
+// Client-only Chakra provider with fallback
+const ClientProvider = dynamic(
+  () => import("@/components/chakra-snippets/ClientProvider"),
+  { ssr: false, loading: () => <Loading /> }
+);
 
+// eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
-  title: "AirBnB Property Management in Adelaide | Luxe Managements",
+  title: "Airbnb Property Management in Adelaide",
   description:
-    "Boost your AirBnB rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
+    "Boost your Airbnb rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
   viewport: "width=device-width, initial-scale=1",
   metadataBase: new URL("https://www.luxemanagements.com"),
-
-  // The manifest.json file is a JSON file that contains metadata about your
-  // Next.js project. It is used by the browser to determine the resources that
-  // are needed to render your application.
-
-  alternates: {
-    canonical: "https://www.luxemanagements.com",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
+  alternates: { canonical: "https://www.luxemanagements.com" },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
-    title: "AirBnB Property Management Adelaide | Luxe Managements",
-    description:
-      "Boost your AirBnB rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
+    type: "website",
     url: "https://www.luxemanagements.com",
-    locale: "en_US",
-
-  
+    title: "Airbnb Property Management Adelaide",
+    description:
+      "Boost your Airbnb rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
     siteName: "Luxe Managements",
     images: [
       {
         url: "https://www.luxemanagements.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Luxe Managements AirBnB property management",
+        alt: "Luxe Managements Airbnb property management",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AirBnB Property Management Adelaide",
-    description: "Boost your AirBnB rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
+    title: "Airbnb Property Management Adelaide",
+    description:
+      "Boost your Airbnb rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
     images: ["https://www.luxemanagements.com/og-image.png"],
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+  icons: { icon: "/favicon.ico", shortcut: "/favicon.ico", apple: "/apple-touch-icon.png" },
 };
 
+// eslint-disable-next-line import/no-unused-modules
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} antialiased`}
-      suppressHydrationWarning
-    >
-      {/* ← this self‐closing <head/> is where Next injects all of the above metadata */}
+    <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
+      {/* Next.js will inject <head> tags based on `metadata` automatically */}
       <head />
       <body>
-        {/* JSON-LD: Site Navigation */}
+        {/* Structured data: site navigation */}
         <Script
           id="ld-navigation"
           type="application/ld+json"
@@ -103,7 +85,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
 
-        {/* JSON-LD: LocalBusiness + BreadcrumbList */}
+        {/* Structured data: LocalBusiness + breadcrumbs */}
         <Script
           id="ld-business-and-breadcrumbs"
           type="application/ld+json"
@@ -125,15 +107,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     addressRegion: "SA",
                     addressCountry: "AU",
                   },
-                  geo: {
-                    "@type": "GeoCoordinates",
-                    latitude: -34.9285,
-                    longitude: 138.6007,
-                  },
+                  geo: { "@type": "GeoCoordinates", latitude: -34.9285, longitude: 138.6007 },
                   openingHoursSpecification: [
                     {
                       "@type": "OpeningHoursSpecification",
-                      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      dayOfWeek: [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                      ],
                       opens: "09:00",
                       closes: "17:00",
                     },
