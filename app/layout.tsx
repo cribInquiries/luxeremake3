@@ -7,8 +7,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Loading from "./loading";
 import LuxeAiAssistance from "@/components/luxeComponents/LuxeAiAssistance";
-
 import { Inter } from "next/font/google";
+import ClientProvider from "@/components/chakra-snippets/ClientProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,16 +16,12 @@ const inter = Inter({
   display: "swap",
 });
 
-const ClientProviderWithFallback = dynamic(
-  () => import("@/components/chakra-snippets/ClientProvider"),
-  { loading: () => <Loading /> },
-);
 
-// eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
   title: "AirBnB Property Management in Adelaide",
   description:
     "Boost your AirBnB rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
+  viewport: "width=device-width, initial-scale=1",
   metadataBase: new URL("https://www.luxemanagements.com"),
   alternates: {
     canonical: "https://www.luxemanagements.com",
@@ -57,7 +53,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AirBnB Property Management Adelaide",
-    description: "Boost your AirBnB rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
+    description:
+      "Boost your AirBnB rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
     images: ["https://www.luxemanagements.com/og-image.png"],
   },
   icons: {
@@ -67,7 +64,6 @@ export const metadata: Metadata = {
   },
 };
 
-// eslint-disable-next-line import/no-unused-modules
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
@@ -75,18 +71,99 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${inter.variable} antialiased`}
       suppressHydrationWarning
     >
+      {/* ← this self‐closing <head/> is where Next injects all of the above metadata */}
+      <head />
       <body>
-        {/* Accessibility: Skip‐to‐Content */}
+        {/* JSON-LD: Site Navigation */}
+        <Script
+          id="ld-navigation"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              url: "https://www.luxemanagements.com/",
+              name: "Luxe Managements",
+              hasPart: [
+                { "@type": "SiteNavigationElement", name: "Home", url: "https://www.luxemanagements.com/" },
+                { "@type": "SiteNavigationElement", name: "Services", url: "https://www.luxemanagements.com/services" },
+                { "@type": "SiteNavigationElement", name: "About Us", url: "https://www.luxemanagements.com/about" },
+                { "@type": "SiteNavigationElement", name: "Testimonials", url: "https://www.luxemanagements.com/testimonials" },
+                { "@type": "SiteNavigationElement", name: "Contact", url: "https://www.luxemanagements.com/contact" },
+              ],
+            }),
+          }}
+        />
 
-        {/* Performance: load non‐critical analytics after hydration */}
+        {/* JSON-LD: LocalBusiness + BreadcrumbList */}
+        <Script
+          id="ld-business-and-breadcrumbs"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "LocalBusiness",
+                  name: "Luxe Managements",
+                  image: "https://www.luxemanagements.com/logo.png",
+                  "@id": "https://www.luxemanagements.com",
+                  url: "https://www.luxemanagements.com",
+                  telephone: "+61 123 456 789",
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "Adelaide",
+                    addressRegion: "SA",
+                    addressCountry: "AU",
+                  },
+                  geo: {
+                    "@type": "GeoCoordinates",
+                    latitude: -34.9285,
+                    longitude: 138.6007,
+                  },
+                  openingHoursSpecification: [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      opens: "09:00",
+                      closes: "17:00",
+                    },
+                  ],
+                  sameAs: [
+                    "https://www.facebook.com/luxemanagements",
+                    "https://www.instagram.com/luxemanagements",
+                    "https://www.tiktok.com/@luxe_managements",
+                  ],
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  itemListElement: [
+                    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.luxemanagements.com/" },
+                    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.luxemanagements.com/services" },
+                    { "@type": "ListItem", position: 3, name: "Furnishing & Styling", item: "https://www.luxemanagements.com/services/furnishing-and-styling" },
+                    { "@type": "ListItem", position: 4, name: "Property Management", item: "https://www.luxemanagements.com/services/property-management" },
+                    { "@type": "ListItem", position: 5, name: "Photography", item: "https://www.luxemanagements.com/services/photography" },
+                    { "@type": "ListItem", position: 6, name: "Cleaning & Linen", item: "https://www.luxemanagements.com/services/cleaning-and-linen" },
+                    { "@type": "ListItem", position: 7, name: "About", item: "https://www.luxemanagements.com/about" },
+                    { "@type": "ListItem", position: 8, name: "Testimonials", item: "https://www.luxemanagements.com/testimonials" },
+                    { "@type": "ListItem", position: 9, name: "FAQ", item: "https://www.luxemanagements.com/faq" },
+                    { "@type": "ListItem", position: 10, name: "Contact", item: "https://www.luxemanagements.com/contact" },
+                  ],
+                },
+              ],
+            }),
+          }}
+        />
+
         <Analytics />
         <SpeedInsights />
 
-        <ClientProviderWithFallback>
+        <ClientProvider>
           <LuxeAiAssistance />
-
           {children}
-        </ClientProviderWithFallback>
+        </ClientProvider>
       </body>
     </html>
   );
