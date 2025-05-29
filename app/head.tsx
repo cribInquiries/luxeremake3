@@ -14,7 +14,7 @@ export default function Head() {
       {/* Open Graph (Facebook, LinkedIn) */}
       <meta
         property="og:title"
-        content="Luxe Managements | Airbnb Property Management Adelaide"
+        content="Luxe Managements Airbnb Property Management Adelaide"
       />
       <meta
         property="og:description"
@@ -47,7 +47,7 @@ export default function Head() {
 
       {/* Page Title */}
       <title>
-        Luxe Managements | Airbnb Property Management Adelaide
+       Luxe Managements Airbnb Property Management Adelaide
       </title>
     </>
   );
