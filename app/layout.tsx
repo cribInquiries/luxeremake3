@@ -1,79 +1,64 @@
-/* eslint-disable import/no-unused-modules */
-
-/// if seo becomes that bad go back to the previous version of this file
+// app/layout.tsx
 import { ReactNode } from "react";
 import dynamic from "next/dynamic";
 import Script from "next/script";
-import { Metadata, type Viewport } from "next";
+import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Inter } from "next/font/google";
 import Loading from "./loading";
 import LuxeAiAssistance from "@/components/luxeComponents/LuxeAiAssistance";
 
-// Load Inter font with swap for performance and FOIT avoidance
+import { Inter } from "next/font/google";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
 });
 
-// Client-only Chakra provider with a loading fallback (SSR enabled)
-const ClientProvider = dynamic(
+const ClientProviderWithFallback = dynamic(
   () => import("@/components/chakra-snippets/ClientProvider"),
   { loading: () => <Loading /> },
 );
 
-// Define responsive viewport separately (Next.js 15+)
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
-
+// eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
-  title: "Best Airbnb Management Adelaide | Luxe Managements",
-  keywords: [
-   "Airbnb Management Adelaide",
-    "Short-Term Rentals",
-    "Property Management",
-    "Luxe Managements",
-    "Guest Experience",
-    "Airbnb Hosting Solutions",
-    "Cleaning Services",
-    "Photography Services",
-  ],
+  title: "Luxe Managements | The Best Airbnb Property Management in Adelaide",
   description:
-    "Luxe Managements delivers top-rated Airbnb property management, housekeeping & guest support in Adelaide. Boost your rental income with expert hosting, professional photos, styling & 5 stars service.",
+    "Comprehensive Airbnb management services designed to maximize your rental income in Adelaide.",
   metadataBase: new URL("https://www.luxemanagements.com"),
-  alternates: { canonical: "https://www.luxemanagements.com" },
+  alternates: {
+    canonical: "https://www.luxemanagements.com",
+  },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
   openGraph: {
-    type: "website",
-    url: "https://www.luxemanagements.com",
-    title: "Best Airbnb Management Adelaide | Luxe Managements",
+    title: "Luxe Managements | Airbnb Property Management Adelaide",
     description:
-  "Luxe Managements delivers top-rated Airbnb property management, housekeeping & guest support in Adelaide. Boost your rental income with expert hosting, professional photos, styling & 5 stars service.",
+      "Expert Airbnb property management services in Adelaide – full hosting, cleaning, styling, and guest care.",
+    url: "https://www.luxemanagements.com",
     siteName: "Luxe Managements",
     images: [
       {
-        url: "https://www.luxemanagements.com/og-image.png",
+        url: "https://www.luxemanagements.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Luxe Managements Airbnb property management",
       },
     ],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Airbnb Management Adelaide | Luxe Managements",
-    description:
-  "Luxe Managements delivers top-rated Airbnb property management, housekeeping & guest support in Adelaide. Boost your rental income with expert hosting, professional photos, styling & 5 stars service.",
-    images: ["https://www.luxemanagements.com/og-image.png"],
+    title: "Luxe Managements | Airbnb Property Management Adelaide",
+    description: "Expert Airbnb management – cleaning, styling & guest care.",
+    images: ["https://www.luxemanagements.com/og-image.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -82,6 +67,7 @@ export const metadata: Metadata = {
   },
 };
 
+// eslint-disable-next-line import/no-unused-modules
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
@@ -89,10 +75,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${inter.variable} antialiased`}
       suppressHydrationWarning
     >
-      {/* Next.js will inject <head> tags (charset, viewport, meta) based on `metadata` & `viewport` exports */}
-      <head />
-      <body>
-        {/* Structured data: site navigation */}
+      <head>
+        {/* Character set & mobile viewport */}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* === Schema.org: Site Navigation === */}
         <Script
           id="ld-navigation"
           type="application/ld+json"
@@ -134,7 +122,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
 
-        {/* Structured data: LocalBusiness + breadcrumbs */}
+        {/* === Schema.org: LocalBusiness + BreadcrumbList === */}
         <Script
           id="ld-business-and-breadcrumbs"
           type="application/ld+json"
@@ -250,16 +238,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             }),
           }}
         />
+      </head>
 
-  <Analytics />
+      <body>
+        {/* Accessibility: Skip‐to‐Content */}
+
+        {/* Performance: load non‐critical analytics after hydration */}
+        <Analytics />
         <SpeedInsights />
 
-
-      
-        <ClientProvider>
+        <ClientProviderWithFallback>
           <LuxeAiAssistance />
-          {children}
-        </ClientProvider>
+
+          {/* Semantic & a11y: main landmark */}
+          <main id="main-content">{children}</main>
+        </ClientProviderWithFallback>
       </body>
     </html>
   );
