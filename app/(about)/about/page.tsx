@@ -12,8 +12,7 @@ import Mat from "@/public/images/compnayPFP/Mat.png";
 import Habibi from "@/public/images/compnayPFP/Habibi.jpeg";
 import Zazeed from "@/public/images/compnayPFP/Zazeed.jpeg";
 import { FaAngleRight } from "react-icons/fa";
-import Aos from "aos";
-import "aos/dist/aos.css";
+
 import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation";
 import Image from "next/image";
 
@@ -21,13 +20,7 @@ import Image from "next/image";
 
 
 const About = () => {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-      once: false,
-      mirror: true,
-    });
-  }, []);
+
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const router = useRouter();
   const [members, setMembers] = useState([
@@ -86,7 +79,7 @@ const About = () => {
       {/* Hero Section */}
 
       <HStack
-        data-aos="fade-up"
+    
         zIndex={3}
         px={["4%", "4%", "6%", "6%", "6%", "10%"]}
         justify={"center"} // !!

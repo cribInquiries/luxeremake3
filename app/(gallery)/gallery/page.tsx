@@ -3,8 +3,7 @@ import { Metadata } from "next";
 import React, { useEffect, useState } from "react";
 import { Box, Text } from "@chakra-ui/react";
 import TitleSubheading from "@/components/luxeComponents/Text/titleSubheading";
-import Aos from "aos";
-import "aos/dist/aos.css";
+
 import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation";
 import {
   DialogContent,
@@ -86,9 +85,6 @@ import Image from "next/image";
 
 
 const Gallery = () => {
-  useEffect(() => {
-    Aos.init({ duration: 1000, once: false, mirror: true });
-  }, []);
 
   // STATES FOR THE GALLERY & MODAL
   const [clickedImage, setClickedImage] = useState<{
@@ -332,7 +328,7 @@ const Gallery = () => {
           borderTop="2px solid #e0e0e0"
           borderLeft="2px solid #e0e0e0"
           opacity="0.6"
-          data-aos="fade-right"
+     
         />
         <Box
           position="absolute"
@@ -343,11 +339,11 @@ const Gallery = () => {
           borderBottom="2px solid #e0e0e0"
           borderRight="2px solid #e0e0e0"
           opacity="0.6"
-          data-aos="fade-left"
+      
         />
 
         {/* Main heading with enhanced typography */}
-        <Box position="relative" data-aos="fade-up">
+        <Box position="relative" >
           <Text
             as="h1"
             fontSize={["42px", "48px", "56px"]}
@@ -388,8 +384,7 @@ const Gallery = () => {
         width="100%"
         marginBottom="40px"
         paddingX={["20px", "30px"]}
-        data-aos="fade-up"
-        data-aos-delay="100"
+
       >
         <Box
           display="flex"
@@ -453,8 +448,8 @@ const Gallery = () => {
             <Box
               key={index}
               position="relative"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
+          
+            
             >
               {/* Property Image with Enhanced Hover Effects */}
               <Box

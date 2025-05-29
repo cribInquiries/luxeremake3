@@ -1,6 +1,5 @@
 "use client";
 
-import { Metadata } from "next";
 import React, { useEffect, useState } from "react";
 import { Box, Text } from "@chakra-ui/react";
 import TitleSubheading from "@/components/luxeComponents/Text/titleSubheading";
