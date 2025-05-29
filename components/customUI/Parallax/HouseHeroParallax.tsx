@@ -152,7 +152,7 @@ export default function HouseHeroParallax() {
           <VStack>
             <Box
               justifyContent="center"
-              gap="25px"
+              gap="15px"
               display="flex"
               w={["5000px", "5000px", "5000px", "5000px", "5000px", "5000px"]}
               h={["280px", "280px", "380px", "500px", "500px", "500px"]}
