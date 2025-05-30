@@ -103,6 +103,20 @@ const Footer = () => {
                 Instagram
               </Text>
             </Box>
+             <Box>
+              <Text
+                as="a"
+                title="Luxe Managements Tiktok"
+                href="https://www.tiktok.com/@luxe_managements"
+                fontSize="14px"
+                color="gray.600"
+                _dark={{ color: "gray.400" }}
+                display="block"
+                mb="10px"
+              >
+                Tiktok
+              </Text>
+            </Box>
           </Box>
 
           {/* Legal column */}
