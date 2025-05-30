@@ -89,11 +89,13 @@
     "react-dom": "$react-dom"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^15.3.3",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@vercel/node": "^2.15.10",
+    "critters": "^0.0.23",
     "depcheck": "^1.4.7",
     "eslint": "^8",
     "eslint-config-next": "15.0.2",
@@ -106,6 +108,7 @@
     "madge": "^8.0.0",
     "postcss": "^8",
     "prettier": "^3.5.3",
+    "source-map-explorer": "^2.5.3",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5",
