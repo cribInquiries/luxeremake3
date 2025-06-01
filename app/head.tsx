@@ -7,6 +7,7 @@ export default function Head() {
       {/* === Charset & Viewport === */}
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="msvalidate.01" content="B0FAC79EC83471CFFCF9C038F16E0539" />
 
       {/* === Schema.org: Site Navigation === */}
       <Script
