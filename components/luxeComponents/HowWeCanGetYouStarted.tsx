@@ -98,7 +98,7 @@ const HowWeCanGetYouStarted = () => {
             data-aos="fade-up"
             position="relative"
             width={["100%", "100%", "100%", "100%", "100%", "100%"]}
-            px={["4%", "4%", "6%", "6%", "6%", "10%"]}
+            px={["4%", "4%", "6%", "6%", "6%", "16%"]}
             margin="0 auto"
             paddingBottom={index === gettingStarted.length - 1 ? "0" : "180px"}
           >
