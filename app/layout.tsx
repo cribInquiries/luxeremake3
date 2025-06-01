@@ -20,7 +20,7 @@ const ClientProviderWithFallback = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: "Airbnb Property Management Adelaide | Luxe Managements",
+  title: "Airbnb Management Adelaide | Luxe Managements",
   description:
     "Airbnb Property Management Adelaide by Luxe Managements. We provide styling, professional photography, cleaning, and guest care so your Adelaide property stands out and earns more.",
   metadataBase: new URL("https://www.luxemanagements.com"),
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: "Airbnb Property Management Adelaide | Luxe Managements",
+    title: "Airbnb Management Adelaide | Luxe Managements",
     description:
       "Airbnb Property Management Adelaide by Luxe Managements. We provide styling, professional photography, cleaning, and guest care so your Adelaide property stands out and earns more.",
     url: "https://www.luxemanagements.com",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Airbnb Property Management Adelaide | Luxe Managements",
+    title: "Airbnb Management Adelaide | Luxe Managements",
     description:
       "Airbnb Property Management Adelaide by Luxe Managements. We provide styling, professional photography, cleaning, and guest care so your Adelaide property stands out and earns more.",
     images: ["https://www.luxemanagements.com/og-image.jpg"]
