@@ -10,13 +10,23 @@ import vrboLogo from "@/public/images/VrboLogo.svg";
 
 const FeaturedPlatforms = () => {
   return (
-    <Box>
+    <Box
+      mt={{ base: "25px", sm: "25px", md: "25px", lg: "100px", xl: "100px" }}
+      mb={{ base: "25px", sm: "25px", md: "50px", lg: "50px", xl: "50px" }}
+    >
       <TitleSubheading
         title="Featured Platforms"
         subheading="We proudly feature our properties on the most trusted platforms in the industry."
       />
 
       <HStack
+        my={{
+          base: "50px",
+          sm: "50px",
+          md: "70px",
+          lg: "70px",
+          xl: "70px",
+        }}
         px={["4%", "4%", "6%", "6%", "6%", "10%"]}
         wrap={["wrap", "wrap", "wrap", "wrap", "nowrap", "nowrap"]}
         justify="center"
@@ -25,9 +35,14 @@ const FeaturedPlatforms = () => {
         h="100%"
         py={6}
         gap={["30px", "30px", "30px", "30px", "80px"]}
-        pt={"80px"}
       >
         <HStack
+          transition={"transform 0.3s"}
+          _hover={{
+            transform: "scale(1.05)",
+
+            cursor: "pointer",
+          }}
           justify={["center", "center", "center", "center", "center"]}
           align={["center", "center", "center", "center", "center"]}
           w={["30%", "30%", "30%", "30%", "100%"]}
@@ -39,6 +54,12 @@ const FeaturedPlatforms = () => {
         </HStack>
 
         <HStack
+          transition={"transform 0.3s"}
+          _hover={{
+            transform: "scale(1.05)",
+
+            cursor: "pointer",
+          }}
           justify={["center", "center", "center", "center", "center"]}
           align={["center", "center", "center", "center", "center"]}
           w={["30%", "30%", "30%", "30%", "100%"]}
@@ -55,6 +76,12 @@ const FeaturedPlatforms = () => {
         </HStack>
 
         <HStack
+          transition={"transform 0.3s"}
+          _hover={{
+            transform: "scale(1.05)",
+
+            cursor: "pointer",
+          }}
           justify={["center", "center", "center", "center", "center"]}
           align={["center", "center", "center", "center", "center"]}
           w={["30%", "30%", "30%", "30%", "100%"]}
@@ -66,6 +93,12 @@ const FeaturedPlatforms = () => {
         </HStack>
 
         <HStack
+          transition={"transform 0.3s"}
+          _hover={{
+            transform: "scale(1.05)",
+
+            cursor: "pointer",
+          }}
           justify={["center", "center", "center", "center", "center"]}
           align={["center", "center", "center", "center", "center"]}
           w={["30%", "30%", "30%", "30%", "100%"]}
@@ -77,6 +110,12 @@ const FeaturedPlatforms = () => {
         </HStack>
 
         <HStack
+          transition={"transform 0.3s"}
+          _hover={{
+            transform: "scale(1.05)",
+
+            cursor: "pointer",
+          }}
           justify={["center", "center", "center", "center", "center"]}
           align={["center", "center", "center", "center", "center"]}
           w={["30%", "30%", "30%", "30%", "100%"]}
@@ -97,4 +136,3 @@ const FeaturedPlatforms = () => {
 };
 
 export default FeaturedPlatforms;
-
