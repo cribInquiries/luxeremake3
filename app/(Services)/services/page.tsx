@@ -23,6 +23,21 @@ import Image from "next/image";
 // app/services/page.tsx
 
 // eslint-disable-next-line import/no-unused-modules
+import { generatePageMetadata } from "@/components/seo/PageMetadata"
+
+const metadata = generatePageMetadata({
+  title: "Property Management Services Adelaide | Luxe Managements",
+  description:
+    "Comprehensive Airbnb property management services in Adelaide. Professional styling, photography, cleaning, and guest management to maximize your rental income.",
+  path: "/services",
+  keywords: [
+    "property management services",
+    "airbnb services adelaide",
+    "rental property management",
+    "short term rental services",
+  ],
+})
+
 
 const Services = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
