@@ -25,7 +25,7 @@ import Image from "next/image";
 // eslint-disable-next-line import/no-unused-modules
 import { generatePageMetadata } from "@/components/seo/PageMetadata"
 
-const metadata = generatePageMetadata({
+export const metadata: Metadata = generatePageMetadata({
   title: "Property Management Services Adelaide | Luxe Managements",
   description:
     "Comprehensive Airbnb property management services in Adelaide. Professional styling, photography, cleaning, and guest management to maximize your rental income.",
