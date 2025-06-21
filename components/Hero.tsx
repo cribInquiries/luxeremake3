@@ -47,8 +47,9 @@ const Hero = () => {
       >
         <Box as={"h1"} color={"#222222"} fontWeight={"600"} width={"90%"}>
           Luxe Managements <br />
-          <Box fontWeight={"400"}>
-            Made <FlipWords words={words} />
+          <Box fontWeight={"400"}   textStyle={"heading"}>
+            Professional Airbnb Property Management in Adelaide.
+            {/* Made <FlipWords words={words} /> */}
           </Box>
         </Box>
       </Stack>
