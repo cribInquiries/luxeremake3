@@ -134,14 +134,7 @@ export const metadata: Metadata = {
     "format-detection": "telephone=no",
   },
 
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-    yahoo: "your-yahoo-verification-code",
-    other: {
-      "msvalidate.01": "B0FAC79EC83471CFFCF9C038F16E0539",
-    },
-  },
+  
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
