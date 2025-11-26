@@ -1,32 +1,9 @@
-import dynamic from "next/dynamic";
-import React, { useEffect } from "react";
-import { Box, Stack, HStack, Icon, Text } from "@chakra-ui/react";
-
-// import { FlipWords } from "@/components/ui/flip-words";
-import { ArrowRight } from "lucide-react";
-
-
-const HouseHeroParallax = dynamic(
-  () => import("./customUI/Parallax/HouseHeroParallax"),
-  { ssr: false },
-);
+import { Box } from "@chakra-ui/react"
+import HouseHeroParallax from "./HouseHeroParallaxClient"
 
 const Hero = () => {
-
-  // const words = [
-  //   "Effortless ",
-  //   "Stress-free",
-  //   "Efficient",
-  //   "Simple",
-  //   "Effective",
-  //   "Easy",
-  // ];
-  // redce font size for moible
-
   return (
     <>
-   
-
       <Box
         overflowX={"hidden"}
         mt={{
@@ -41,12 +18,8 @@ const Hero = () => {
 
         <HouseHeroParallax />
       </Box>
-
-      {/* Add New Pack Button */}
-
-      {/* New Dialog Component */}
     </>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
