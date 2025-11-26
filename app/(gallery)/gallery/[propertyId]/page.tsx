@@ -18,53 +18,105 @@ interface PropertyPageProps {
 }
 
 export default async function PropertyPage({ params }: PropertyPageProps) {
+  console.log("[v0] PropertyPage rendered with params:", params)
+
   const { propertyId } = await params
   const id = Number.parseInt(propertyId)
+
+  console.log("[v0] Parsed property ID:", id)
 
   if (isNaN(id)) {
     notFound()
   }
 
-  if (id === 2) {
-    return <NorwoodEstateView />
-  }
-
-  if (id === 8) {
-    const property = getPropertyById(id)
-    if (!property) notFound()
-    return <ClearviewTransformationView property={property} />
-  }
-
-  if (id === 10) {
-    return <BlankPropertyProfile />
-  }
-
-  const property = getPropertyById(id)
-
-  if (!property) {
-    notFound()
-  }
-
-  if (property.transformationStory) {
+  try {
     if (id === 1) {
+      console.log("[v0] Rendering Glenelg property")
+      const property = getPropertyById(id)
+      if (!property) {
+        console.error("[v0] Property 1 not found")
+        notFound()
+      }
       return <GlenelgTransformationView property={property} />
     }
-    if (id === 4) {
-      return <MelbourneStreetTransformationView property={property} />
+
+    if (id === 2) {
+      console.log("[v0] Rendering Norwood property")
+      return <NorwoodEstateView />
     }
+
     if (id === 3) {
+      console.log("[v0] Rendering West Beach property")
+      const property = getPropertyById(id)
+      if (!property) {
+        console.error("[v0] Property 3 not found")
+        notFound()
+      }
       return <WestBeachTransformationView property={property} />
     }
+
+    if (id === 4) {
+      console.log("[v0] Rendering Melbourne Street property")
+      const property = getPropertyById(id)
+      if (!property) {
+        console.error("[v0] Property 4 not found")
+        notFound()
+      }
+      return <MelbourneStreetTransformationView property={property} />
+    }
+
     if (id === 5) {
+      console.log("[v0] Rendering Seaford property")
+      const property = getPropertyById(id)
+      if (!property) {
+        console.error("[v0] Property 5 not found")
+        notFound()
+      }
       return <SeafordTransformationView property={property} />
     }
+
     if (id === 6) {
+      console.log("[v0] Rendering Enfield property")
+      const property = getPropertyById(id)
+      if (!property) {
+        console.error("[v0] Property 6 not found")
+        notFound()
+      }
       return <EnfieldTransformationView property={property} />
     }
-    return <PropertyTransformationView property={property} />
-  }
 
-  return <PropertyDetailView property={property} />
+    if (id === 8) {
+      console.log("[v0] Rendering Clearview property")
+      const property = getPropertyById(id)
+      if (!property) {
+        console.error("[v0] Property 8 not found")
+        notFound()
+      }
+      return <ClearviewTransformationView property={property} />
+    }
+
+    if (id === 10) {
+      console.log("[v0] Rendering blank property profile")
+      return <BlankPropertyProfile />
+    }
+
+    console.log("[v0] Rendering fallback property view")
+    const property = getPropertyById(id)
+
+    if (!property) {
+      console.error("[v0] Property not found:", id)
+      notFound()
+    }
+
+    if (property.transformationStory) {
+      return <PropertyTransformationView property={property} />
+    }
+
+    return <PropertyDetailView property={property} />
+  } catch (error) {
+    console.error("[v0] Error rendering property page:", error)
+    throw error
+  }
 }
 
 export async function generateMetadata({ params }: PropertyPageProps) {
